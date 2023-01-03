@@ -19,7 +19,20 @@ namespace P04
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            string jmeno1 = textBox1.Text;
+            string jmeno2 = textBox4.Text;
+
+            DateTime narozen = dateTimePicker1.Value;
+            DateTime narozen2 = dateTimePicker2.Value;
+
+            Clovek Daniel = new Clovek(jmeno1, narozen);
+            Clovek Filip = new Clovek(jmeno2, narozen2);
+
+            MessageBox.Show(String.Format($"{Daniel.ToString()}"));
+            Daniel.NastavJmeno("Daník");
+            MessageBox.Show(String.Format($"{Daniel.ToString()}"));
+
+            MessageBox.Show(String.Format($"{Filip.Starsi(Daniel)}"));
         }
     }
 }
