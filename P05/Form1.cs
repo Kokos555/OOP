@@ -16,5 +16,16 @@ namespace P05
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string veta = textBox1.Text;
+            int cislo = Convert.ToInt32(textBox2.Text);
+
+            Retez test = new Retez(veta, cislo);
+
+            test.Zkrat();
+            label3.Text = test.ToString();
+        }
     }
 }
