@@ -32,8 +32,6 @@ namespace P05
         {
             string[] slova = veta.Split(' ');
             veta = string.Empty;
-            slova[slova.Length - 1] = ".";
-
             for (int i = 0; i < slova.Length; i++)
             {
                 if (cislo <= 0)
@@ -45,6 +43,10 @@ namespace P05
                     if (i != cislo)
                     {
                         veta += String.Format($"{slova[i]} ");
+                        if (i == cislo - 1)
+                        {
+                            veta += String.Format(".");
+                        }
                     }
                     else
                     {
