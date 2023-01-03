@@ -10,9 +10,9 @@ namespace P04
     internal class Clovek
     {
         private string jmeno;
-        private string narozen;
+        private DateTime narozen;
 
-        public Clovek(string jmeno, string narozen)
+        public Clovek(string jmeno, DateTime narozen)
         {
             this.jmeno = jmeno;
             this.narozen = narozen;
@@ -54,12 +54,19 @@ namespace P04
 
         public string Starsi(Clovek clovek2)
         {
-
+            if (clovek2.narozen < narozen)
+            {
+                return String.Format($"{clovek2.jmeno} je starší než {jmeno}");
+            }
+            else
+            {
+                return String.Format($"{jmeno} je starší než {clovek2.jmeno}");
+            }
         }
 
         public override string ToString()
         {
-            
+            return String.Format($"{jmeno} má {Vek()} let a {(Plnolety() ? "je" : "není")} plnolety");
         }
     }
 }
