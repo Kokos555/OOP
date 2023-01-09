@@ -11,15 +11,35 @@ namespace P05
         private string veta;
         private int cislo;
 
+        public string Veta
+        {
+            get 
+            {
+                return veta; 
+            }
+            set
+            {
+                veta = value;
+                if (veta != "")
+                {
+                    veta=veta.Substring(0,1).ToUpper() + veta.Substring(1);
+                    if (veta[veta.Length-1]!= '.')
+                    {
+                        veta += '.';
+                    }
+                }
+            }
+        }
+
         public Retez(string veta)
         {
-            this.veta = veta;
+            Veta = veta;
             cislo = 1;
         }
 
         public Retez(string veta, int cislo)
         {
-            this.veta = veta;
+            Veta = veta;
             this.cislo = cislo;
         }
 
@@ -30,30 +50,7 @@ namespace P05
 
         public void Zkrat()
         {
-            string[] slova = veta.Split(' ');
-            veta = string.Empty;
-            for (int i = 0; i < slova.Length; i++)
-            {
-                if (cislo <= 0)
-                {
-                    veta = "";
-                }
-                else
-                {
-                    if (i != cislo)
-                    {
-                        veta += String.Format($"{slova[i]} ");
-                        if (i == cislo - 1)
-                        {
-                            veta += String.Format(".");
-                        }
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-            }
+            
         }
     }
 }

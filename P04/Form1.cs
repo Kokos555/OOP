@@ -29,7 +29,7 @@ namespace P04
             Clovek Filip = new Clovek(jmeno2, narozen2);
 
             MessageBox.Show(String.Format($"{Daniel.ToString()}"));
-            Daniel.NastavJmeno("Daník");
+
             MessageBox.Show(String.Format($"{Daniel.ToString()}"));
 
             MessageBox.Show(String.Format($"{Filip.Starsi(Daniel)}"));
