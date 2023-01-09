@@ -45,12 +45,16 @@ namespace P05
 
         public override string ToString()
         {
-            return veta;
+            return Veta;
         }
 
-        public void Zkrat()
+        public string Zkrat()
         {
-            
+            string[] slova = Veta.Split(' ');
+            slova = slova.Take(cislo).ToArray();
+
+            Veta = string.Join(" ", slova);
+            return Veta;
         }
     }
 }
