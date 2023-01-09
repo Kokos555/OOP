@@ -22,10 +22,13 @@ namespace P05
             string veta = textBox1.Text;
             int cislo = Convert.ToInt32(textBox2.Text);
 
-            Retez test = new Retez(veta, cislo);
+            Retez test1 = new Retez(veta);
+            MessageBox.Show(string.Format($"{test1.ToString()}"));
+            MessageBox.Show(string.Format($"{test1.Zkrat()}"));
 
-            test.Zkrat();
-            label3.Text = test.ToString();
+            Retez test2 = new Retez(veta,cislo);
+            MessageBox.Show(string.Format($"{test2.ToString()}"));
+            MessageBox.Show(string.Format($"{test2.Zkrat()}"));
         }
     }
 }
