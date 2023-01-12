@@ -27,5 +27,10 @@ namespace P02
                 listBox1.Items.Add(zbozi.Vypis());
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
