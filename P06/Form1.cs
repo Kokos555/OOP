@@ -33,17 +33,23 @@ namespace P06
 
             foreach (Student student in students)
             {
-                listBox1.Items.Add(student);
-                if (student.Vek() >= 18) listBox2.Items.Add(student);
+                listBox1.Items.Add(student.ToString());
+                if (student.Vek() >= 18) listBox2.Items.Add(student.ToString());
 
-                if (student.Znamka != 0)
+                if (student.znamka != 0)
                 {
                     count++;
-                    sum += student.Znamka;
+                    sum += student.znamka;
                 }
             }
-            average = sum / (double)count;
-            MessageBox.Show("Průměr klasifikovaných studentů je " + average.ToString());
+            if (count != 0) { 
+                average = sum / (double)count;
+                MessageBox.Show("Průměr klasifikovaných studentů je " + average.ToString());
+            }
+            else
+            {
+                MessageBox.Show(String.Format("Nelze vypočítat!!!"));
+            }
         }
     }
 }

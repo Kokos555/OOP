@@ -39,14 +39,14 @@ namespace P06
             Znamka = znamka;
         }
 
-        private int znamka;
+  public int znamka;
         public int Znamka
         {
             get
             {
                 if (znamka == 0)
                 {
-                    MessageBox.Show(string.Format("Neproběhla klasifikace!")+znamka);
+                    MessageBox.Show(string.Format("Neproběhla klasifikace!"));
                 }
                 return znamka;
             }
@@ -89,7 +89,8 @@ namespace P06
 
         public override string ToString()
         {
-            string odpoved = string.Format($"Student {Jmeno} {Příjmení}, narozen {Datum_narozeni.ToString("d")} s věkem {Vek()} {(Sleva() ? "má" : "nemá")} nárok na slevu na dopravu. A z testu dostal {znamka}.");
+            string odpoved = string.Format($"Student {Jmeno} {Příjmení}, narozen {Datum_narozeni.ToString("d")} s věkem {Vek()} {(Sleva() ? "má" : "nemá")} nárok na slevu na dopravu. A z testu dostal {Znamka}.");
+
             return odpoved;
         }
 
