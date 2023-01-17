@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace P06
 {
@@ -26,11 +27,23 @@ namespace P06
             students.Add(new Student("Filip", "Dusil", DateTime.Parse("15.5.1998"), 0));
             students.Add(new Student("Radek","Novotny", DateTime.Parse("8.4.2006"), 5));
 
-            for (int i = 0; i < students.Count; i++)
+            int count = 0;
+            int sum = 0;
+            double average;
+
+            foreach (Student student in students)
             {
-                listBox1.Items.Add(students[i].ToString());
-                
+                listBox1.Items.Add(student);
+                if (student.Vek() >= 18) listBox2.Items.Add(student);
+
+                if (student.Znamka != 0)
+                {
+                    count++;
+                    sum += student.Znamka;
+                }
             }
+            average = sum / (double)count;
+            MessageBox.Show("Průměr klasifikovaných studentů je " + average.ToString());
         }
     }
 }
