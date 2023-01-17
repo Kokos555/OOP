@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace P03
+namespace P07
 {
     public partial class Form1 : Form
     {
@@ -19,17 +19,11 @@ namespace P03
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string veta = textBox1.Text;
-            string znak = textBox2.Text;
-            Retez retez = new Retez(veta);
-            MessageBox.Show(String.Format($"{veta} = {retez.PocetSlov()} slov"));
-            veta = retez.Smaz(znak);
-            label3.Text = retez.Vypis();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            string spz = textBox1.Text;
+            int nosnost = Convert.ToInt32(textBox2.Text);
+            
+            NakladniAuto test = new NakladniAuto(spz, nosnost);
+            MessageBox.Show(test.ToString());
         }
     }
 }
