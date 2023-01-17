@@ -89,7 +89,7 @@ namespace P06
 
         public override string ToString()
         {
-            string odpoved = string.Format($"Student {Jmeno} {Příjmení}, narozen {Datum_narozeni.ToString("d")} s věkem {Vek()} {(Sleva() ? "má" : "nemá")} nárok na slevu na dopravu. A z testu dostal {Znamka}.");
+            string odpoved = string.Format($"Student {Jmeno} {Příjmení}, narozen {Datum_narozeni.ToString("d")} s věkem {Vek()} {(Sleva() ? "má" : "nemá")} nárok na slevu na dopravu. A z testu dostal {znamka}.");
             return odpoved;
         }
 
