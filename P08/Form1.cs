@@ -16,5 +16,15 @@ namespace P08
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string jmeno = textBox1.Text;
+            Atlet idk = new Atlet(jmeno);
+
+            idk.Behej(20);
+            idk.ZjistiUnavu();
+            idk.Spanek(2);
+        }
     }
 }
