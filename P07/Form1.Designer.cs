@@ -78,6 +78,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Naloz auto";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -87,6 +88,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "Vyloz auto";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
