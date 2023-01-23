@@ -17,14 +17,26 @@ namespace P08
             InitializeComponent();
         }
 
+        Atlet idk;
+
         private void button1_Click(object sender, EventArgs e)
         {
             string jmeno = textBox1.Text;
-            Atlet idk = new Atlet(jmeno);
+            idk = new Atlet(jmeno);
+        }
 
-            idk.Behej(20);
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int beh = Convert.ToInt32(textBox2.Text);
+            idk.Behej(beh);
             idk.ZjistiUnavu();
-            idk.Spanek(2);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int spanek = Convert.ToInt32(textBox3.Text);
+            idk.Spanek(spanek);
+            idk.ZjistiUnavu();
         }
     }
 }
