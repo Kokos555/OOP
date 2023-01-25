@@ -66,5 +66,10 @@ namespace P08
         {
             MessageBox.Show($"Únava atleta {Jmeno} je {unava}");
         }
+
+        public override string ToString()
+        {
+            return string.Format($"Založil jsi atleta se jménem {Jmeno}");
+        }
     }
 }

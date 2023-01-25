@@ -23,6 +23,7 @@ namespace P08
         {
             string jmeno = textBox1.Text;
             idk = new Atlet(jmeno);
+            MessageBox.Show(idk.ToString());
         }
 
         private void button2_Click(object sender, EventArgs e)
