@@ -37,6 +37,7 @@ namespace P08
 
         public void Behej(int pocet_km)
         {
+            
             for (int i = 0; i< pocet_km; i++)
             {
                 unava += 10;
